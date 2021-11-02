@@ -2,11 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(26, 25, 25);
+  color: rgb(221, 222, 223);
 }
 
 .App {
   width: 100%;
-  background-color: antiquewhite;
+  
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+
+    input {
+      background-color: rgb(221, 222, 223);
+      padding: 10px;
+      border-radius: 10px;
+      color: rgb(26, 25, 25);
+    }
+    
+  }
+}
+
+.books {
+  margin: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 

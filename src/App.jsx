@@ -17,6 +17,8 @@ const App = () => {
 
   console.log(books);
 
+  
+
 
   const booksJSX = books.map((book, index) => {
     return <BookTile key={book.title + (index + 1)} book={book} />;
@@ -24,8 +26,18 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="App__header h1">Some books I read recently...</h1>
-
+      <h1 className="App__header--h1">Some books I read recently...</h1>
+      <h2 className="App__header--h2">Update or enter a new book</h2>
+      <form className="App__form">
+        <label htmlFor="title">Title</label>
+        <input type="text" name="title"/>
+        <label htmlFor="author">Author</label>
+        <input type="text" name="author"/>
+        <label htmlFor="publisher">Publisher</label>
+        <input type="text" name="publisher"/>
+        <label htmlFor="pubdate">Pub Date</label>
+        <input type="text" name="puddate"/>
+      </form>
       <section className="books">{booksJSX}</section>
     </div>
   );
